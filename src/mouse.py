@@ -17,7 +17,7 @@ class mouse():
         else:
             return False
 
-    def click_elem(self,xpath,msgOk,msgFail,to=5):
+    def click_elem(self,xpath,to=5):
         if self.visibility_element(xpath, to):
         #if self.select(xpath,to):
             self.select(xpath, to)
@@ -28,7 +28,7 @@ class mouse():
             return False
             pytest.fail(msgFail)
     
-    def click_elem_highlight(self,xpath,msgOk,msgFail,sleep=5):
+    def click_elem_highlight(self,xpath,sleep=5):
         if self.visibility_element(xpath,sleep):
             self.highlight(xpath, msgOk,sleep)
             self.select(xpath)
