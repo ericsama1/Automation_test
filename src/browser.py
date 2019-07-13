@@ -202,3 +202,15 @@ class browser():
     
     def print_page(self):
         pass
+
+    def switch_alert(self):
+        self.alert = self.driver.switch_to.alert
+
+    def accept_alert(self):
+        self.alert.accept()
+
+    def dismiss_alert(self):
+        self.alert.dismiss()
+    
+    def send_key_alert(self, text):
+        self.alert.send_keys(text)

@@ -2,7 +2,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait 
 from selenium.webdriver.support import expected_conditions as EC 
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from constants.constants import MsgSearch
 
 
@@ -24,8 +24,11 @@ class search():
         return self.search_element_by(By.ID, id)
     
     def search_element_by(self, by, value):
-        return self.driver.find_element(by, value)
-        self.log.info(MsgSearch.MSG_SEARCH_ELEM_BY.format(by, value))
+        try:
+            return self.driver.find_element(by, value)
+            self.log.info(MsgSearch.MSG_SEARCH_ELEM_BY.format(by, value))
+        except NoSuchElementException:
+            return None
     
     def search_elements(self, xpath, to): 
         """
