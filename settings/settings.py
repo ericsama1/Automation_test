@@ -1,6 +1,5 @@
-import os, sys
-firefox_binary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
+import os,sys
 
-url = 'https://google.com'
+url = 'http://exercises.fdvs.com.ar/semisenior.html'
 
 path_evidence = os.path.abspath(sys.path[0])
