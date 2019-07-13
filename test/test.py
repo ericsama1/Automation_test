@@ -8,8 +8,7 @@ class challenge_test(unittest.TestCase, test_steps):
         self.openChrome(url)
 
     def tearDown(self):
-        self.wait(20)
-        #self.close_browser()
+        self.close_browser()
         
 
     def test_main(self):
