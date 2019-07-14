@@ -28,6 +28,7 @@ The steps for the test is in the folder src/steps.
 
 ## Pages
 The Page Object is in the folder src/pages.
+In these files, create the method to write or get in an element in the each pages.
 
 ## Pages Locator
 In this framework, I use xpath to indentify an element. In the folder src/pageLoc put the xpath of the pages.
