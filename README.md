@@ -1,6 +1,6 @@
 # Automation test
 
-This framework is in Python 3, with selenium. It's for automate web pages. In this framework, is added more method than selenium already has.
+This framework is in Python 3, with selenium. It's for automate web pages. In this framework, control more better the default selenium's find_element, because it is using explict wait. And this framework create an log file with the accion of selenium in the page.
 
 
 ## Instalation
@@ -12,6 +12,7 @@ It use these libraries:
 
 These requirements is in requirements file in requirements/requirements.txt
 
+You need add the path of the framework in the OS environment variables to run the test.
 
 ## Settings
 The file settings/settings.py is the settings file, where assign the url to automate. And define the path to save the evidence (screenshot, log file, etc), the default value is the test path.
@@ -27,3 +28,7 @@ The steps for the test is in the folder src/steps.
 
 ## Pages
 The Page Object is in the folder src/pages.
+
+## Pages Locator
+In this framework, I use xpath to indentify an element. In the folder src/pageLoc put the xpath of the pages.
+
